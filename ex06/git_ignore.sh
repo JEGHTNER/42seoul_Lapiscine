@@ -1,1 +1,3 @@
-cat ../.gitignore
+#!/bin/bash
+$TOP
+git ls-files -o -i --exclude-standard
