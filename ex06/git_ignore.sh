@@ -1,3 +1,2 @@
 #!/bin/bash
-$TOP
-git ls-files -o -i --exclude-standard
+git ls-files -i -o --exclude-standard
