@@ -1,1 +1,1 @@
-find . -type d|wc -l|sed 's/ //g'
+find . -type d -o -type f|wc -l|tr -d ' '
