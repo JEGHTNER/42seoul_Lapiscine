@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 10:56:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:26:54 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/29 20:19:32 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/29 20:19:45 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	write (1, &c, 1);
-}
-
-int main()
-{
-	ft_putchar('a');
+	*div = a / b;
+	*mod = a % b;
 }

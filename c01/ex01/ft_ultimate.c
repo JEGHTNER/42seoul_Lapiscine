@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 10:56:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:26:54 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/28 17:26:15 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/29 10:37:54 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_ultimate_ft(int *********nbr)
 {
-	write (1, &c, 1);
-}
-
-int main()
-{
-	ft_putchar('a');
+	*********nbr=42;
 }

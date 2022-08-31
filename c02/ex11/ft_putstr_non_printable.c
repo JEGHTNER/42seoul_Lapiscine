@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 10:56:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:26:54 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/31 17:18:13 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/31 17:28:21 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr_non_printable(char *str)
 {
-	write (1, &c, 1);
-}
+	int		i;
+	char	*hex;
+	char	trans[2];
 
-int main()
-{
-	ft_putchar('a');
+	i = 0;
+	hex = "0123456789abcde";
+	while (str[i])
+	{
+		if (!(str[i] >= ' ' && str[i] <= '~'))
+		{
+			trans[0] = hex[str[i] / 16];
+			trans[1] = hex[str[i] % 16];
+			write(1, &trans, 2);
+		}
+		else
+			write (1, &str[i], 1);
+		i++;
+	}
 }

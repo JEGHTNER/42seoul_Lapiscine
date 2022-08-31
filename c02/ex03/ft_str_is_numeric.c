@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 10:56:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:26:54 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/30 16:57:15 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/30 18:32:09 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_str_is_numeric(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
+	int	correct;
 
-int main()
-{
-	ft_putchar('a');
+	i = 0;
+	correct = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			correct += 1;
+		i++;
+	}
+	if (correct == 0)
+		return (1);
+	else
+		return (0);
 }

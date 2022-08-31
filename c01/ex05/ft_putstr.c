@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 10:56:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:26:54 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/29 20:16:56 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/29 20:56:56 by jehelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write (1, &c, 1);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 
 int main()
 {
-	ft_putchar('a');
+	char * str1;
+	str1="string1";
+	char str2[]="string2";
+	ft_putstr("string");
+	ft_putstr(str1);
+	ft_putstr(str2);
 }
+

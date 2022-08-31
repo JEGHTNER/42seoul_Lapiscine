@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 10:56:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:26:54 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/30 19:04:15 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/30 19:04:55 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_str_is_printable(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
+	int	count;
 
-int main()
-{
-	ft_putchar('a');
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= ' ' && str[i] <= '~'))
+			count++;
+		i++;
+	}
+	if (count != 0)
+		return (0);
+	else
+		return (1);
 }

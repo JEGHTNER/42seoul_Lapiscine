@@ -1,69 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 13:19:50 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:36:28 by jehelee          ###   ########.fr       */
+/*   Created: 2022/08/30 20:31:54 by jehelee           #+#    #+#             */
+/*   Updated: 2022/08/31 12:43:12 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
+void	lowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		ft_putchar(str[i++]);
-	}
-}
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
+		if ('A' <= str[i] && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	return (i);
 }
 
-void	ft_putnbr(int nb)
+char	*ft_strcapitalize(char *str)
 {
-	if (nb == -2147483648)
+	int	i;
+	int	sign;
+
+	i = 0;
+	sign = 0;
+	while (str[i] != '\0')
 	{
-		ft_putstr("-2147483648");
-		return ;
+		if ((str[i] >= 'a' && str[i] <= 'z'))
+		{
+			if (sign == 0)
+				str[i] -= 32;
+			sign = 1;
+		}
+		else if (str[i] >= '0' && str[i] <= '9')
+			sign = 1;
+		else
+			sign = 0;
+		i++;
 	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-	{
-		ft_putchar(nb + '0');
-	}
+	return (str);
 }
 
 int main()
 {
-	ft_putnbr(-2147483648);
+	char str[] = "testi ng teEst #$(FilefF";
+	lowcase(str);
+	ft_strcapitalize(str);
 }
