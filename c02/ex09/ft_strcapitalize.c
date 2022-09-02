@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:31:54 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/31 12:43:12 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/02 21:06:22 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,4 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int main()
-{
-	char str[] = "testi ng teEst #$(FilefF";
-	lowcase(str);
-	ft_strcapitalize(str);
 }

@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 17:18:13 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/02 21:10:04 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/01 19:02:51 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/01 19:02:54 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr_non_printable(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int		i;
-	char	*hex;
-	char	trans[2];
+	int	i;
 
 	i = 0;
-	hex = (char*)"0123456789abcde";
-	while (str[i])
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
-		if (!(str[i] >= ' ' && str[i] <= '~'))
-		{
-			trans[0] = hex[str[i] / 16];
-			trans[1] = hex[str[i] % 16];
-			write(1, &trans, 2);
-		}
-		else
-			write (1, &str[i], 1);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
+	return (0);
 }

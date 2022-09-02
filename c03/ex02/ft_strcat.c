@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 17:18:13 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/02 21:10:04 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/01 19:29:45 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/01 19:42:08 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr_non_printable(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	int		i;
-	char	*hex;
-	char	trans[2];
+	int	i;
+	int	j;
 
 	i = 0;
-	hex = (char*)"0123456789abcde";
-	while (str[i])
-	{
-		if (!(str[i] >= ' ' && str[i] <= '~'))
-		{
-			trans[0] = hex[str[i] / 16];
-			trans[1] = hex[str[i] % 16];
-			write(1, &trans, 2);
-		}
-		else
-			write (1, &str[i], 1);
+	j = 0;
+	while (dest[i] != '\0')
 		i++;
-	}
+	while (src[j] != '\0')
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
 }

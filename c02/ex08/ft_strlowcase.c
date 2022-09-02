@@ -6,11 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:27:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/30 19:30:56 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/02 21:03:16 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 	int	sub;
@@ -23,4 +23,5 @@ int	ft_strlowcase(char *str)
 			str[i] = str[i] + sub;
 		i++;
 	}
+	return (str);
 }
