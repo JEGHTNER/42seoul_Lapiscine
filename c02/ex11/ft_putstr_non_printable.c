@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 17:18:13 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/02 21:10:04 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/03 13:53:14 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_non_printable(char *str)
 	char	trans[2];
 
 	i = 0;
-	hex = (char*)"0123456789abcde";
+	hex = (char *) "0123456789abcde";
 	while (str[i])
 	{
 		if (!(str[i] >= ' ' && str[i] <= '~'))

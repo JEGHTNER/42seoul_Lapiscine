@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 20:25:03 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/02 21:40:46 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/03 13:43:43 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/03 13:51:46 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
 #include <unistd.h>
 
-void	ft_printdata(char *str, unsigned int size)
+void	ft_printdata(char *str, int size)
 {
 	int	i;
 
@@ -28,15 +27,12 @@ void	ft_printdata(char *str, unsigned int size)
 	}
 }
 
-char	*ft_get_hex(char *str, unsigned int size)
+char	*ft_get_hex(char *str, int size, char *mem)
 {
 	int		i;
 	int		j;
 	char	*hex;
-	char	trans[2];
-	char	*mem;
 
-	mem = (char *)malloc(sizeof(char *) * 32);
 	i = -1;
 	j = 0;
 	hex = (char *)"0123456789abcdef";
@@ -53,7 +49,6 @@ char	*ft_get_hex(char *str, unsigned int size)
 		j += 2;
 	}
 	return (mem);
-	free(mem);
 }
 
 void	ft_get_addr(unsigned long long nb)
@@ -81,10 +76,10 @@ void	ft_get_addr(unsigned long long nb)
 
 void	ft_print_hex(char *str, unsigned int size)
 {
-	char	*mem;
+	char	mem[32];
 	int		i;
 
-	mem = ft_get_hex(str, size);
+	ft_get_hex(str, size, mem);
 	i = 0;
 	while (i < 8)
 	{
@@ -97,9 +92,8 @@ void	ft_print_hex(char *str, unsigned int size)
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned long long	temp;
-	unsigned int		cut_size;
-	unsigned int		len;
-	int					i;
+	int					cut_size;
+	unsigned int		i;
 	char				*string;
 
 	i = 0;
