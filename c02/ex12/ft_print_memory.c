@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 13:43:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/03 13:51:46 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/04 23:56:07 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,8 @@ void	ft_get_addr(unsigned long long nb)
 	while (i < 16)
 		addr[i++] = '0';
 	i = 0;
-	while (nb >= 1)
+	while (nb > 0)
 	{
-		if (nb <= 16)
-			addr[15 - i] = hex[nb % 16];
 		addr[15 - i] = hex[nb % 16];
 		nb /= 16;
 		i++;

@@ -6,30 +6,44 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 17:18:13 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/03 13:53:14 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/05 01:00:02 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c, int n)
+{
+	write(1, &c, n);
+}
+
+int	is_printable(unsigned char c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
+}
+
 void	ft_putstr_non_printable(char *str)
 {
-	int		i;
-	char	*hex;
-	char	trans[2];
+	int				i;
+	unsigned char	*hex;
+	unsigned char	*ustr;
 
+	ustr = (unsigned char *)str;
 	i = 0;
-	hex = (char *) "0123456789abcde";
-	while (str[i])
+	hex = (unsigned char *) "0123456789abcdef";
+	while (ustr[i])
 	{
-		if (!(str[i] >= ' ' && str[i] <= '~'))
+		if (!(ustr[i] >= ' ' && ustr[i] <= '~'))
 		{
-			trans[0] = hex[str[i] / 16];
-			trans[1] = hex[str[i] % 16];
-			write(1, &trans, 2);
+			write(1, &hex[ustr[i] / 16], 1);
+			write(1, &hex[ustr[i] % 16], 1);
+			write(1, "\\", 1);
 		}
 		else
-			write (1, &str[i], 1);
+			write (1, &ustr[i], 1);
 		i++;
 	}
 }

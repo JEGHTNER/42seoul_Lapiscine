@@ -1,49 +1,64 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 20:31:54 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/03 22:07:33 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/03 14:31:59 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/03 15:56:45 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	lowcase(char *str)
+#include<unistd.h>
+void	recprint(char * arr, int i,int n)
+{
+	if(i > 9)
+		return ;
+	write(1, arr, n);
+	arr[i]++;
+	recprint(arr, i++, n);
+}
+
+void	ft_init(char *arr ,int n)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (i < n)
 	{
-		if ('A' <= str[i] && str[i] <= 'Z')
-			str[i] += 32;
+		arr[i] = i + '0';
 		i++;
 	}
 }
 
-char	*ft_strcapitalize(char *str)
+void	ft_print_combn(int n)
 {
-	int	i;
-	int	sign;
+	int		i;
+	int		j;
+	int		k;
+	char	arr[11];
 
-	lowcase(str);
-	i = 0;
-	sign = 0;
-	while (str[i] != '\0')
+	ft_init(arr, n);
+	while (arr[0] <= 10 -n && n>=1)
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z'))
+		arr[n-1]++;
+		i = n;
+		while(i > 1 && n > 1)
 		{
-			if (sign == 0)
-				str[i] -= 32;
-			sign = 1;
+			if(i>9)
+			{
+				
+				
+			}
 		}
-		else if (str[i] >= '0' && str[i] <= '9')
-			sign = 1;
-		else
-			sign = 0;
-		i++;
+
+	
+
 	}
-	return (str);
+}
+
+int main()
+{
+	ft_print_combn(3);
 }
