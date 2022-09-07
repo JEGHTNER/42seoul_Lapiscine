@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 13:07:57 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:27:58 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/05 12:34:18 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_print_reverse_alphabet(void)
 		write(1, &c, 1);
 		c--;
 	}
-}
-
-int main()
-{
-	ft_print_reverse_alphabet();
 }

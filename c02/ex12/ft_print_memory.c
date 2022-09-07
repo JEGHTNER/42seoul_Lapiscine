@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 13:43:43 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/04 23:56:07 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/07 11:34:50 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	ft_get_addr(unsigned long long nb)
 		nb /= 16;
 		i++;
 	}
-	write(1, &addr, 16);
+	write(1, addr, 16);
 	write(1, ": ", 2);
 }
 
@@ -110,5 +110,5 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		write(1, "\n", 1);
 		i = i + 16;
 	}
-	return (0);
+	return (addr);
 }

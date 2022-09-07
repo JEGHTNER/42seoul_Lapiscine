@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:42:48 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:35:13 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/05 12:34:02 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,4 @@ void	ft_print_comb2(void)
 		}
 		front++;
 	}
-}
-
-int main()
-{
-	ft_print_comb2();
 }

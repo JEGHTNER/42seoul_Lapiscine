@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 13:09:12 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:28:23 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/05 12:34:14 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,4 @@ void	ft_print_numbers(void)
 		write (1, &c, 1);
 		c++;
 	}
-}
-
-int main()
-{
-	ft_print_numbers();
 }

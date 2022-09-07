@@ -6,10 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 14:31:59 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/03 15:56:45 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/05 12:33:45 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include<unistd.h>
 void	recprint(char * arr, int i,int n)
 {
@@ -62,3 +63,4 @@ int main()
 {
 	ft_print_combn(3);
 }
+*/

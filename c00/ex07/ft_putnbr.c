@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 13:19:50 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:36:28 by jehelee          ###   ########.fr       */
+/*   Updated: 2022/09/05 12:33:51 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,4 @@ void	ft_putnbr(int nb)
 	{
 		ft_putchar(nb + '0');
 	}
-}
-
-int main()
-{
-	ft_putnbr(-2147483648);
 }

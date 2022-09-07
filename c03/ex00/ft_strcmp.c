@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 19:02:51 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/01 19:02:54 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/07 17:45:16 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] != '\0' || s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			break ;
 		i++;
 	}
-	return (0);
+	return ((unsigned char)s1[i] -(unsigned char) s2[i]);
 }

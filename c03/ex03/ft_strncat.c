@@ -6,14 +6,14 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 19:42:20 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/01 19:50:46 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/07 12:44:06 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;

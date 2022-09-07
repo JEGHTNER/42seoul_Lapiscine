@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 11:56:03 by jehelee           #+#    #+#             */
-/*   Updated: 2022/08/28 13:33:13 by jehelee          ###   ########.fr       */
+/*   Updated: 2022/09/05 12:34:11 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,3 @@ void	ft_is_negative(int n)
 		write (1, &pos, 1);
 	}
 }
-
-int main()
-	{
-		ft_is_negative('d');
-		ft_is_negative(-1555);
-		ft_is_negative(3000);
-	}

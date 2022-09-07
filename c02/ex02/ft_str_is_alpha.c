@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:09:47 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/05 01:01:12 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/07 15:14:58 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@ int	ft_str_is_alpha(char *str)
 	int	i;
 
 	i = 0;
+	if (str[i] == '\0')
+		return (1);
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
+		if ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
+			i++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
