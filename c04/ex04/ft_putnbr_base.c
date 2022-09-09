@@ -6,11 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 20:38:24 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/08 15:33:44 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/09 19:16:45 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
 int	ft_strlen(char *str)
 {
@@ -35,7 +35,7 @@ int	check_valid(char *base)
 		if (base[i] == '-' || base[i] == '+')
 			return (0);
 		j = i + 1;
-		while (j < ft_strlen(base) - 1)
+		while (base[j] != '\0')
 		{
 			if (base[i] == base[j])
 				return (0);

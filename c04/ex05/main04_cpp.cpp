@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main04.cpp                                         :+:      :+:    :+:   */
+/*   main04_cpp.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haeem <haeem@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:37:20 by haeem             #+#    #+#             */
-/*   Updated: 2022/09/01 17:33:44 by haeem            ###   ########seoul.kr  */
+/*   Updated: 2022/09/08 17:00:26 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <climits>
 #include <cstring>
-#include "./ex00/ft_strlen.c"
-#include "./ex01/ft_putstr.c"
-#include "./ex02/ft_putnbr.c"
-#include "./ex03/ft_atoi.c"
-#include "./ex04/ft_putnbr_base.c"
+//#include "./ex00/ft_strlen.c"
+//#include "./ex01/ft_putstr.c"
+//#include "./ex02/ft_putnbr.c"
+//#include "./ex03/ft_atoi.c"
+//#include "./ex04/ft_putnbr_base.c"
 #include "./ex05/ft_atoi_base.c"
 // #include "./ex06/ft_.c"
 // #include "./ex07/ft_.c"

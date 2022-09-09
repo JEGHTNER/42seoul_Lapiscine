@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 19:21:00 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/09 19:16:33 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/08 21:26:38 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/09 22:52:35 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_iterative_power(int nb, int power)
 {
-	write(1, &c, 1);
-}
+	int	result;
 
-void	ft_putnbr(int nb)
-{
-	long long	n;
-
-	n = (long long) nb;
-	if (n < 0)
+	result = nb;
+	while (power > 1)
 	{
-		ft_putchar('-');
-		n = n * -1;
+		result = result * nb;
+		power--;
 	}
-	if (n <= 9)
-		ft_putchar(n + '0');
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-		n /= 10;
-	}
+	if (power == 0)
+		return (1);
+	if (power < 0)
+		return (0);
+	return (result);
 }

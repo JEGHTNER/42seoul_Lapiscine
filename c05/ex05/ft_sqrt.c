@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 19:21:00 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/09 19:16:33 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/09 21:01:49 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/09 22:56:55 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	long	i;
+	long	n;
 
-void	ft_putnbr(int nb)
-{
-	long long	n;
-
-	n = (long long) nb;
+	n = nb;
 	if (n < 0)
+		return (0);
+	if (n == 1)
+		return (1);
+	i = 2;
+	if (n >= 2)
 	{
-		ft_putchar('-');
-		n = n * -1;
+		while (i * i <= n)
+		{
+			if (i * i == n)
+				return (i);
+			i++;
+		}
 	}
-	if (n <= 9)
-		ft_putchar(n + '0');
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-		n /= 10;
-	}
+	return (0);
 }

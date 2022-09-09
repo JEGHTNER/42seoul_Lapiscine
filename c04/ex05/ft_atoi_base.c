@@ -6,12 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 20:38:06 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/08 16:39:05 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/09 19:12:54 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include<stdio.h>
 
 int	get_index(char c, char *base)
 {
@@ -37,23 +36,17 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ptr_i(char *str, char *base, int *sign)
+int	ptr_i(char *str, int *sign)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] >= 9 && str[i] <= 13 || str[i] == 32)
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] != '\0')
+	while (str[i] == '+' || str[i] == '-')
 	{
-		while (str[i] == '+' || str[i] == '-')
-		{
-			if (str[i] == '-')
-				*sign *= -1;
-			i++;
-		}
-		if (!(str[i] == '+' || str[i] == '-'))
-			break ;
+		if (str[i] == '-')
+			*sign *= -1;
 		i++;
 	}
 	return (i);
@@ -66,10 +59,11 @@ int	check_valid(char *base)
 
 	if (ft_strlen(base) < 2)
 		return (0);
+	i = 0;
 	while (base[i] != '\0')
 	{
 		if (base[i] == '+' || base[i] == '-' || \
-			(base[i] >= 9 && base[i] <= 13))
+			(base[i] >= 9 && base[i] <= 13) || base[i] == 32)
 			return (0);
 		j = i + 1;
 		while (base[j] != '\0')
@@ -91,13 +85,13 @@ int	ft_atoi_base(char *str, char *base)
 	int	len;
 	int	check;
 
+	result = 0;
+	sign = 1;
+	i = ptr_i(str, &sign);
 	check = check_valid(base);
+	len = ft_strlen(base);
 	if (check == 1)
-	{
-		result = 0;
-		sign = 1;
-		i = ptr_i(str, base, &sign);
-		len = ft_strlen(base);
+	{	
 		while (get_index(str[i], base) != -1)
 		{
 			result *= len;
