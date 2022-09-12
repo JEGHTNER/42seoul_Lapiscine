@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 20:19:31 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 16:58:56 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 17:07:30 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	is_sep(char c, char *sep)
 	int	i;
 
 	i = 0;
-
 	while (sep[i])
 	{
 		if (sep[i] == c)
@@ -35,7 +34,6 @@ int	count_string(char *str, char *sep)
 
 	i = 0;
 	count = 1;
-
 	while (str[i])
 	{
 		if (is_sep(str[i], sep) && !is_sep(str[i + 1], sep))
