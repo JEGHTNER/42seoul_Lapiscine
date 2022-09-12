@@ -6,12 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 19:16:56 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 16:23:47 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 17:27:43 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <unistd.h>
 
 int	ft_strlen(char *str);
 int	check_valid(char *base);

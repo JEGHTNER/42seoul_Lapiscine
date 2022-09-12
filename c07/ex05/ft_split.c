@@ -6,11 +6,10 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 20:19:31 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 17:07:30 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 17:29:30 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 
 int	is_sep(char c, char *sep)

@@ -6,12 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 03:38:15 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 16:24:34 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 17:20:20 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include<stdio.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -41,7 +40,6 @@ int	ft_strlen(char *str)
 int	ft_total_len(char **strings, int size, char *sep)
 {
 	int	total_len;
-	int	sep_len;
 	int	i;
 
 	total_len = 0;
