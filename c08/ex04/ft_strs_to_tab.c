@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 21:47:38 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/10 02:12:13 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/12 21:26:34 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/12 21:27:01 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	int	i;
+#include <stdlib.h>
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i <= nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+
+int	main(int ac, char **av)
+{
+	
 }

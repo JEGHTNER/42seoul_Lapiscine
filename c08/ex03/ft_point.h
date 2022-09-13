@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 21:47:38 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/10 02:12:13 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/12 21:13:26 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/12 21:25:27 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	int	i;
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i <= nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+typedef struct s_point
+{
+	int	x;
+	int	y;
+}	t_point;
+
+#endif

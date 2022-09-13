@@ -6,11 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 13:57:57 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 16:24:42 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 21:58:49 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	get_index(char c, char *base)
+long long	get_index(char c, char *base)
 {
 	int	i;
 
@@ -75,13 +75,13 @@ int	check_valid(char *base)
 	return (1);
 }
 
-int	ft_atoi_base(char *str, char *base)
+long long	ft_atoi_base(char *str, char *base)
 {
-	int	i;
-	int	sign;
-	int	result;
-	int	len;
-	int	check;
+	int			i;
+	int			sign;
+	long long	result;
+	long long	len;
+	int			check;
 
 	result = 0;
 	sign = 1;

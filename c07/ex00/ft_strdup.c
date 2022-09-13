@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 03:23:23 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 17:30:38 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 19:37:24 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(char *src)
 	char	*dest;
 
 	i = 0;
-	dest = (char *)malloc(sizeof(char) * ft_strlen(src)+1);
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!dest)
 		return (0);
 	while (src[i])

@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 21:01:49 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/09 22:56:55 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/10 02:15:54 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int	ft_sqrt(int nb)
 	i = 2;
 	if (n >= 2)
 	{
-		while (i * i <= n)
+		while (i <= n / i)
 		{
-			if (i * i == n)
+			if (i == n / i)
 				return (i);
 			i++;
 		}

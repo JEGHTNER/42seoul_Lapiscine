@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 03:38:15 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 17:20:20 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 21:43:26 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		return (str);
 	}
 	total_len = ft_total_len(strs, size, sep);
-	str = (char *)malloc(sizeof(char) * (total_len + 1));
+	str = (char *)malloc(sizeof(char) * (total_len));
 	if (!str)
 		return (0);
+	str[0] = 0;
 	i = 0;
 	while (i < size - 1)
 	{

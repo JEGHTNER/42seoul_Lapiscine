@@ -6,7 +6,7 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 20:19:31 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 17:29:30 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/12 22:00:44 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ int	count_string(char *str, char *sep)
 	int	count;
 
 	i = 0;
-	count = 1;
+	count = 0;
 	while (str[i])
 	{
-		if (is_sep(str[i], sep) && !is_sep(str[i + 1], sep))
+		while (str[i] && is_sep(str[i], sep))
+			i++;
+		if (str[i] != '\0')
 			count++;
-		i++;
+		while (str[i] && !is_sep(str[i], sep))
+			i++;
 	}
 	return (count);
 }

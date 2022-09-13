@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 21:47:38 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/10 02:12:13 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/11 13:02:16 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/11 17:47:54 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
+int check_input(char *str)
 {
-	int	i;
-
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i <= nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+    int i;
+    
+    i = 0;
+    if (str[i] == '\0')
+        return (0);
+    while(str[i])
+    {
+        if(!(str[i] >= '0' && str[i] <= '9'))
+            return (0);
+        i++;
+    }
+    return (1);
 }

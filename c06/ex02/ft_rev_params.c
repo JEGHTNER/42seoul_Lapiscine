@@ -1,27 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 21:47:38 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/10 02:12:13 by jehelee          ###   ########seoul.kr  */
+/*   Created: 2022/09/10 02:59:07 by jehelee           #+#    #+#             */
+/*   Updated: 2022/09/10 03:00:32 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
 {
 	int	i;
 
-	if (nb < 2)
-		return (0);
-	i = 2;
-	while (i <= nb / i)
+	i = 0;
+	while (str[i])
 	{
-		if (nb % i == 0)
-			return (0);
+		ft_putchar(str[i]);
 		i++;
 	}
-	return (1);
+}
+
+int	main(int ac, char **av)
+{
+	int	i;
+
+	i = ac - 1;
+	while (i > 0)
+	{
+		ft_putstr(av[i]);
+		ft_putchar('\n');
+		i--;
+	}
+	return (0);
 }
