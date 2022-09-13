@@ -6,12 +6,11 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 21:26:34 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/12 21:27:01 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/13 14:51:57 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
 
 int	main(int ac, char **av)
 {
