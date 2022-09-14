@@ -6,13 +6,13 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 14:31:59 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/10 02:06:06 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/13 21:35:21 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -43,18 +43,6 @@ void	print(char *arr, int n)
 	}
 }
 
-void	ft_init(char *arr, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		arr[i] = i + '0';
-		i++;
-	}
-}
-
 void	ft_print_combn(int n)
 {
 	int		i;
@@ -80,7 +68,7 @@ void	ft_print_combn(int n)
 	}
 }
 
-int main()
+int	main(void)
 {
 	ft_print_combn(3);
 }

@@ -6,15 +6,22 @@
 /*   By: jehelee <jehelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 22:53:57 by jehelee           #+#    #+#             */
-/*   Updated: 2022/09/13 14:45:04 by jehelee          ###   ########seoul.kr  */
+/*   Updated: 2022/09/14 08:08:56 by jehelee          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(int *arr)
+int	abs(int n)
 {
-	
+	if (n < 0)
+		n *= -1;
+	return (n);
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
 
 int	put(int *arr, int x, int y)
@@ -24,7 +31,7 @@ int	put(int *arr, int x, int y)
 	i = 0;
 	while (i < x)
 	{
-		if (arr[i] == y || (i - x) * (i - x) == (arr[i] - y) * (arr[i] - y))
+		if (arr[i] == y || abs(i - x) == abs(arr[i] - y))
 			return (0);
 		i++;
 	}
@@ -34,11 +41,18 @@ int	put(int *arr, int x, int y)
 void	ten(int *arr, int *count, int x)
 {
 	int	y;
+	int	i;
 
 	if (x == 10)
 	{
-		print(arr);
+		i = 0;
+		while (i < 10)
+		{
+			ft_putchar(arr[i] + '0');
+			i++;
+		}
 		(*count)++;
+		ft_putchar('\n');
 		return ;
 	}
 	y = 0;
@@ -57,7 +71,11 @@ int	ft_ten_queens_puzzle(void)
 {
 	int	arr[10];
 	int	count;
+	int	i;
 
+	i = 0;
+	while (i < 10)
+		arr[i++] = -1;
 	count = 0;
 	ten(arr, &count, 0);
 	return (count);

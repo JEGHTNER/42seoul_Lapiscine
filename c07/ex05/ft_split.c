@@ -54,7 +54,7 @@ char	*make_string(char *str, char *sep)
 	len = 0;
 	while (str[len] && !is_sep(str[len], sep))
 		len++;
-	new_str = (char *)malloc(sizeof(char) * (len + 1));
+	new_str = (char *)malloc(sizeof(char) * ()len + 1);
 	if (!new_str)
 		return (0);
 	i = 0;
